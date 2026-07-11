@@ -176,9 +176,9 @@ if __name__ == '__main__':
     ax.set_title('Detail')
     fig.savefig('images/heatmap.jpg')
 
-    # Top 10 plot
+    # Top 15 plot
 
-    bar_data = counts[:10].copy()
+    bar_data = counts[:15].copy()
     bar_data['value'] = bar_data['value'].apply(lambda r: f'{r:02d}')
 
     fig, ax = plt.subplots()
@@ -187,7 +187,7 @@ if __name__ == '__main__':
     for bar in ax.containers:
         ax.bar_label(bar, fmt='%d')
     ax.set_title('Top 10')
-    fig.savefig('images/top-10.jpg')
+    fig.savefig('images/top-15.jpg')
 
     # Distribution
 
